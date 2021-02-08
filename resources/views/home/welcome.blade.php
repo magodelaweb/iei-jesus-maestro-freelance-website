@@ -16,7 +16,7 @@
               <li>Definir un contenido específico para esta sección (diferencial)</li>
               <li>Botón CTO</li>
             </ul></p>
-          <a href="#" class="card-link">Card link</a>
+          <a href="{{route("login")}}" class="card-link">Login</a>
           <a href="#" class="card-link">Another link</a>
         </div>
       </div>
