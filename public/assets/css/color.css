@@ -142,31 +142,38 @@ a.circle.hover-blue.active-blue {
 }
 
 ul.nav.navbar-nav li:nth-child(1) a:hover,
-ul.nav.navbar-nav li:nth-child(1) a.active {
+ul.nav.navbar-nav li:nth-child(1) a.active,
+ul.nav.navbar-nav li:nth-child(1) a:hover {
 	background-color:#f57f25;
 }
 ul.nav.navbar-nav li:nth-child(2) a:hover,
-ul.nav.navbar-nav li:nth-child(2) a.active {
+ul.nav.navbar-nav li:nth-child(2) a.active,
+ul.nav.navbar-nav li:nth-child(2) a:hover {
 	background-color:#a9d63b;
 }
 ul.nav.navbar-nav li:nth-child(3) a:hover,
-ul.nav.navbar-nav li:nth-child(3) a.active {
+ul.nav.navbar-nav li:nth-child(3) a.active,
+ul.nav.navbar-nav li:nth-child(3) a:hover {
 	background-color:#e868a7;
 }
 ul.nav.navbar-nav li:nth-child(4) a:hover,
-ul.nav.navbar-nav li:nth-child(4) a.active {
+ul.nav.navbar-nav li:nth-child(4) a.active,
+ul.nav.navbar-nav li:nth-child(4) a:hover {
 	background-color:#ffba06;
 }
 ul.nav.navbar-nav li:nth-child(5) a:hover,
-ul.nav.navbar-nav li:nth-child(5) a.active {
+ul.nav.navbar-nav li:nth-child(5) a.active,
+ul.nav.navbar-nav li:nth-child(5) a:hover {
 	background-color:#6ab3d1;
 }
 ul.nav.navbar-nav li:nth-child(6) a:hover,
-ul.nav.navbar-nav li:nth-child(6) a.active {
+ul.nav.navbar-nav li:nth-child(6) a.active,
+ul.nav.navbar-nav li:nth-child(6) a:hover {
 	background-color:#907ee2;
 }
 ul.nav.navbar-nav li:nth-child(7) a:hover,
-ul.nav.navbar-nav li:nth-child(7) a.active {
+ul.nav.navbar-nav li:nth-child(7) a.active,
+ul.nav.navbar-nav li:nth-child(7) a:hover {
 	background-color:#ec4b4b;
 }
 ul.nav.navbar-nav li:nth-child(1) a {
