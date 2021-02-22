@@ -9,20 +9,19 @@
       <div id="main-slider" class="owl-carousel owl-theme slider positionR">
           <div class="item positionR">
               <figure class="slider-image positionR">
-                  <img src="{{asset("assets/img/slider/main-1.jpg")}}" alt="" class="d-none d-sm-block"/>
-                  <img src="{{asset("assets/img/slider/main-xs-1.jpg")}}" alt="" class="d-sm-none"/>
+                  <img src="{{asset("assets/img/slider/main-iei-1.jpg")}}" alt="" class="d-none d-sm-block"/>
+                  <img src="{{asset("assets/img/slider/main-iei-xs-1.jpg")}}" alt="" class="d-sm-none"/>
               </figure>
               <div class="slider-text positionA text-center">
                   <div class="container">
                       <div class="row justify-content-center">
                           <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1 text-center">
-                              <h1>Baby House</h1>
-                              <h2>Care School for baby</h2>
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                  has been the industry's standard dummy text everwhen an unknown
-                                  a galley of type an a type specimen
-                              </p>
-                              <a href="register.html" class="itg-button">Read More</a>
+                            <h1>IEI Jesús Maestro</h1>
+                            <h2>Calidad Educativa</h2>
+                            <p>Educamos con gran amor al niño, procurando la formación integral, puntualidad al ingreso,
+                              la dedicación de las docentes , el involucramiento de los padres y el horario de clases.
+                            </p>
+                            <a href="{{route("admision")}}" class="itg-button">Admisión</a>
                           </div>
                       </div>
                   </div>
@@ -30,41 +29,38 @@
           </div>
           <div class="item positionR">
               <figure class="slider-image positionR">
-                  <img src="{{asset("assets/img/slider/main-2.jpg")}}" alt="" class="d-none d-sm-block"/>
-                  <img src="{{asset("assets/img/slider/main-xs-2.jpg")}}" alt="" class="d-sm-none"/>
+                  <img src="{{asset("assets/img/slider/main-iei-2.jpg")}}" alt="" class="d-none d-sm-block"/>
+                  <img src="{{asset("assets/img/slider/main-iei-xs-2.jpg")}}" alt="" class="d-sm-none"/>
               </figure>
               <div class="slider-text positionA text-center">
-                  <div class="container">
-                      <div class="row justify-content-center">
-                          <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1 text-center">
-                              <h1>Baby House</h1>
-                              <h2>Care School for baby</h2>
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                  has been the industry's standard dummy text everwhen an unknown
-                                  a galley of type an a type specimen
-                              </p>
-                              <a href="register.html" class="itg-button">Read More</a>
-                          </div>
-                      </div>
-                  </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1 text-center">
+                            <h1>IEI Jesús Maestro</h1>
+                            <h2>Educación en valores</h2>
+                            <p>Educamos en valores como la amistad, la comprensión, la tolerancia, la paciencia, la solidaridad y el respeto,
+                              los cuales son esenciales para un sano desarrollo de los niños.
+                            </p>
+                            <a href="{{route("admision")}}" class="itg-button">Admisión</a>
+                        </div>
+                    </div>
+                </div>
               </div>
           </div>
           <div class="item positionR">
               <figure class="slider-image positionR">
-                  <img src="{{asset("assets/img/slider/main-3.jpg")}}" alt="" class="d-none d-sm-block"/>
-                  <img src="{{asset("assets/img/slider/main-xs-3.jpg")}}" alt="" class="d-sm-none"/>
+                  <img src="{{asset("assets/img/slider/main-iei-3.jpg")}}" alt="" class="d-none d-sm-block"/>
+                  <img src="{{asset("assets/img/slider/main-iei-xs-3.jpg")}}" alt="" class="d-sm-none"/>
               </figure>
               <div class="slider-text positionA text-center">
                   <div class="container">
                       <div class="row justify-content-center">
                           <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1 text-center">
-                              <h1>Baby House</h1>
-                              <h2>Care School for baby</h2>
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                  has been the industry's standard dummy text everwhen an unknown
-                                  a galley of type an a type specimen
+                              <h1>IEI Jesús Maestro</h1>
+                              <h2>Los niños primero</h2>
+                              <p>Nuestras profesoras son profesionales con muchos años de experiencia y siempre atentas a las necesidades de los niños.
                               </p>
-                              <a href="register.html" class="itg-button">Read More</a>
+                              <a href="{{route("admision")}}" class="itg-button">Admisión</a>
                           </div>
                       </div>
                   </div>
