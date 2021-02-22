@@ -34,21 +34,21 @@
                         </a> --}}
                         <span class="navbar-brand mb-0 h1"></span>
                         <!-- Button For Responsive toggle -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barra" aria-controls="barra" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra" aria-controls="barra" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="sr-only">Desplegar menú</span>
                           <span class="navbar-toggler-icon"></span>
                         </button>
                         <!-- Navbar Collapse -->
                         <div id="barra" class="collapse navbar-collapse justify-content-end">
                             <!-- nav -->
-                            <ul class="navbar-nav nav mr-auto">
-                                <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                            <ul class="navbar-nav nav">
+                                <li class="nav-item"><a href="#" class="nav-link active">Inicio <span class="sr-only">(página actual)</span></a></li>
                                 <li class="nav-item"><a href="#" class="nav-link">Infraestructura</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link">Horarios</a></li>
-                                {{-- <li class="nav-item"><a href="#" class="nav-link active">Propuesta Pedagógica <span class="sr-only">(página actual)</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Propuesta Pedagógica</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link">Admisión</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link">Noticias</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li> --}}
+                                <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
                             </ul>
                         </div>
                         <!-- navbar-collapse -->
