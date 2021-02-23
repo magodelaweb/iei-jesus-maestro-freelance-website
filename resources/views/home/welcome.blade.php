@@ -17,7 +17,7 @@
                       <div class="row justify-content-center">
                           <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1 text-center">
                             <h1>IEI Jesús Maestro</h1>
-                            <h2>Calidad Educativa</h2>
+                            <h2>Calidad educativa</h2>
                             <p>Educamos con gran amor al niño, procurando la formación integral, puntualidad al ingreso,
                               la dedicación de las docentes , el involucramiento de los padres y el horario de clases.
                             </p>
