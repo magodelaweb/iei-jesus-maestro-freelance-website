@@ -3,18 +3,18 @@
   IEI Jesus Maestro - Inicio
 @endsection
 @section('body')
-  @include('snippets.nav')
+  
   <!--//================Slider start==============//-->
   <section id="slider-section">
       <div id="main-slider" class="owl-carousel owl-theme slider positionR">
           <div class="item positionR">
               <figure class="slider-image positionR">
-                  <img src="{{asset("assets/img/slider/main-iei-1.jpg")}}" alt="" class="d-none d-sm-block"/>
-                  <img src="{{asset("assets/img/slider/main-iei-xs-1.jpg")}}" alt="" class="d-sm-none"/>
+                  <img src="{{asset("assets/img/slider/main-iei-1.jpg")}}" alt="" class="hidden-xs"/>
+                  <img src="{{asset("assets/img/slider/main-iei-xs-1.jpg")}}" alt="" class="hidden-sm hidden-lg hidden-md"/>
               </figure>
               <div class="slider-text positionA text-center">
                   <div class="container">
-                      <div class="row justify-content-center">
+                      <div class="row">
                           <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1 text-center">
                             <h1>IEI Jesús Maestro</h1>
                             <h2>Calidad educativa</h2>
@@ -29,8 +29,8 @@
           </div>
           <div class="item positionR">
               <figure class="slider-image positionR">
-                  <img src="{{asset("assets/img/slider/main-iei-2.jpg")}}" alt="" class="d-none d-sm-block"/>
-                  <img src="{{asset("assets/img/slider/main-iei-xs-2.jpg")}}" alt="" class="d-sm-none"/>
+                  <img src="{{asset("assets/img/slider/main-iei-2.jpg")}}" alt="" class="hidden-xs"/>
+                  <img src="{{asset("assets/img/slider/main-iei-xs-2.jpg")}}" alt="" class="hidden-sm hidden-lg hidden-md"/>
               </figure>
               <div class="slider-text positionA text-center">
                 <div class="container">
@@ -49,8 +49,8 @@
           </div>
           <div class="item positionR">
               <figure class="slider-image positionR">
-                  <img src="{{asset("assets/img/slider/main-iei-3.jpg")}}" alt="" class="d-none d-sm-block"/>
-                  <img src="{{asset("assets/img/slider/main-iei-xs-3.jpg")}}" alt="" class="d-sm-none"/>
+                  <img src="{{asset("assets/img/slider/main-iei-3.jpg")}}" alt="" class="hidden-xs"/>
+                  <img src="{{asset("assets/img/slider/main-iei-xs-3.jpg")}}" alt="" class="hidden-sm hidden-lg hidden-md"/>
               </figure>
               <div class="slider-text positionA text-center">
                   <div class="container">
@@ -68,6 +68,7 @@
           </div>
       </div>
   </section>
+  <!--//================Slider end==============//-->
   <div class="clear"></div>
   <!--//================services starts==============//-->
   <section class="padT50 padB20 theme-border-bottom">
@@ -78,17 +79,8 @@
                       <i class="fa fa-clock-o" aria-hidden="true"></i>
                   </div>
                   <div class="service-text">
-                      <h4>Horario de Atención</h4>
+                      <h4>Atención</h4>
                       <p>8:00 am - 2:00 pm</p>
-                  </div>
-              </div>
-              <div class="col-md-3 col-sm-6 col-xs-12 padB30">
-                  <div class="service-icon theme-icon color-orange">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                  </div>
-                  <div class="service-text">
-                      <h4>Correo Electrónico</h4>
-                      <p>ieijesusmaestro@hotmail.com</p>
                   </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12 padB30">
@@ -107,6 +99,15 @@
                   <div class="service-text">
                       <h4>Teléfono</h4>
                       <p>(01) 2585427</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12 padB30">
+                  <div class="service-icon theme-icon color-orange">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </div>
+                  <div class="service-text">
+                      <h4>Correo</h4>
+                      <p>ieijesusmaestro@hotmail.com</p>
                   </div>
               </div>
           </div>
@@ -241,23 +242,90 @@
       </div>
   </section>
   <!--//================About end==============//-->
-  <!--//================Slider end==============//-->
-  <div class="container container-fluid mt-5">
-    <div class="row">
-      <div class="card col-12">
-        <div class="card-body">
-          <h5 class="card-title">Inicio</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Inicio subtitle</h6>
-          <p class="card-text" style="text-align: justify;">Esta pantalla debe mostrar el diferencial del colegio, desde un aspecto de marketing:
-            <ul>
-              <li>Contener un resumen de todas las otras secciones</li>
-              <li>Definir un contenido específico para esta sección (diferencial)</li>
-              <li>Botón CTO</li>
-            </ul></p>
-          <a href="{{route("login")}}" class="card-link">Login</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
+  {{-- <div class="clear"></div> --}}
+  <!--//================Gallery starts==============//-->
+  <section class="">{{--padT80 padB50--}}
+      <!--- Theme heading start-->
+      <div class="theme-heading marB30 positionR">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-4 col-sm-6 col-xs-10  col-md-offset-4 col-sm-offset-3 col-xs-offset-1 heading-box text-center">
+                      <h3 class="theme-color marB10">Galería</h3>
+                      <span class=" marB10"> <i class="fa fa-child" aria-hidden="true"></i> </span>
+                      <p class=" marB10">Actividades al aire libre, en la capilla y en el comedor.
+                      </p>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-  </div>
+      <!--- Theme heading end-->
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-sm-8 col-xs12">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6 col-xs-12 marB30">
+                          <div class="theme-hover theme-hover-pink">
+                              <figure>
+                                  <img src="assets/img/gallery/iei5.jpg" alt="">
+                                  <figcaption><a href="assets/img/fancy-box/iei5.jpg" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
+                              </figure>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-12 marB30">
+                          <div class="theme-hover theme-color-hover">
+                              <figure>
+                                  <img src="assets/img/gallery/iei3.jpg" alt="">
+                                  <figcaption><a href="assets/img/fancy-box/iei3.jpg" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
+                              </figure>
+                          </div>
+                      </div>
+                      <div class="col-md-12 col-sm-12 col-xs-12 marB30">
+                          <div class="theme-hover theme-orange-hover">
+                              <figure>
+                                  <img src="assets/img/gallery/iei4.jpg" alt="" class="hidden-xs">
+                                  <img src="assets/img/gallery/iei4.jpg" alt="" class="hidden-md hidden-lg hidden-sm">
+                                  <figcaption><a href="assets/img/fancy-box/iei4.jpg" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
+                              </figure>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs12">
+                  <div class="row">
+                      <div class="col-md-12 col-sm-12 col-xs-12 marB30">
+                          <div class="theme-hover theme-color-purple">
+                              <figure>
+                                  <img src="assets/img/gallery/iei2.jpg" alt="" class="hidden-xs">
+                                  <img src="assets/img/gallery/iei2.jpg" alt="" class="hidden-md hidden-lg hidden-sm">
+                                  <figcaption><a href="assets/img/fancy-box/iei2.jpg" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
+                              </figure>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--//================Gallery end==============//-->
+  <div class="clear"></div>
+        <!--//================contact us starts==============//-->
+        <div class="padTB30 theme-bg contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="contact-text">
+                            <p class="colorW text-left special-font mar0">Vacantes disponibles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="footer-btn">
+                            <a href="contact.html" class="itg-button-simple pull-right small-left">Admisión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!--//================contact us end==============//-->
+
 @endsection

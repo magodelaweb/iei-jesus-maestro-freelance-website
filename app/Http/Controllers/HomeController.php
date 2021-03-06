@@ -39,4 +39,8 @@ class HomeController extends Controller
         "menu"=>"contacto"
       ]);
     }
+    public function reglamento_interno(){
+      $pathToFile=public_path('files').'/reglamento_interno.pdf';
+      return response()->file($pathToFile);
+    }
 }

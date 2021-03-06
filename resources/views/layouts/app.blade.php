@@ -15,7 +15,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset("assets/img/favicon.ico")}}" type="image/x-icon">
     <link rel="icon" href="{{asset("assets/img/favicon.ico")}}" type="image/x-icon">
-    <link href="{{asset('assets/css/bootstrap5.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Master Css -->
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <title>@yield('title')</title>
@@ -35,7 +35,9 @@
             </div>
         </div>
         <!--//================preloader  end==============//-->
-@yield('body')
+        @include('snippets.nav')
+        @yield('body')
+        @include('snippets.footer')
     <script src="{{asset("assets/js/bootstrap.bundle.min.js")}}"></script>
     <script src="{{asset("assets/js/jquery.min.js")}}"></script>
     <script src="{{asset("assets/plugin/megamenu/js/hover-dropdown-menu.js")}}"></script>
