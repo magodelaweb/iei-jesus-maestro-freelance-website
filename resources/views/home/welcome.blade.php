@@ -3,7 +3,7 @@
   IEI Jesus Maestro - Inicio
 @endsection
 @section('body')
-  
+
   <!--//================Slider start==============//-->
   <section id="slider-section">
       <div id="main-slider" class="owl-carousel owl-theme slider positionR">
@@ -266,25 +266,25 @@
                       <div class="col-md-6 col-sm-6 col-xs-12 marB30">
                           <div class="theme-hover theme-hover-pink">
                               <figure>
-                                  <img src="assets/img/gallery/iei5.jpg" alt="">
-                                  <figcaption><a href="assets/img/fancy-box/iei5.jpg" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
+                                  <img src="{{asset("assets/img/gallery/iei3g.jpg")}}" alt="">
+                                  <figcaption><a href="{{asset("assets/img/fancy-box/iei3f.jpg")}}" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
                               </figure>
                           </div>
                       </div>
                       <div class="col-md-6 col-sm-6 col-xs-12 marB30">
                           <div class="theme-hover theme-color-hover">
                               <figure>
-                                  <img src="assets/img/gallery/iei3.jpg" alt="">
-                                  <figcaption><a href="assets/img/fancy-box/iei3.jpg" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
+                                  <img src="{{asset("assets/img/gallery/iei2g.jpg")}}" alt="">
+                                  <figcaption><a href="{{asset("assets/img/fancy-box/iei2f.jpg")}}" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
                               </figure>
                           </div>
                       </div>
                       <div class="col-md-12 col-sm-12 col-xs-12 marB30">
                           <div class="theme-hover theme-orange-hover">
                               <figure>
-                                  <img src="assets/img/gallery/iei4.jpg" alt="" class="hidden-xs">
-                                  <img src="assets/img/gallery/iei4.jpg" alt="" class="hidden-md hidden-lg hidden-sm">
-                                  <figcaption><a href="assets/img/fancy-box/iei4.jpg" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
+                                  <img src="{{asset("assets/img/gallery/iei4gx.jpg")}}" alt="" class="hidden-xs">
+                                  <img src="{{asset("assets/img/gallery/iei4g.jpg")}}" alt="" class="hidden-md hidden-lg hidden-sm">
+                                  <figcaption><a href="{{asset("assets/img/fancy-box/iei4f.jpg")}}" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
                               </figure>
                           </div>
                       </div>
@@ -295,9 +295,9 @@
                       <div class="col-md-12 col-sm-12 col-xs-12 marB30">
                           <div class="theme-hover theme-color-purple">
                               <figure>
-                                  <img src="assets/img/gallery/iei2.jpg" alt="" class="hidden-xs">
-                                  <img src="assets/img/gallery/iei2.jpg" alt="" class="hidden-md hidden-lg hidden-sm">
-                                  <figcaption><a href="assets/img/fancy-box/iei2.jpg" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
+                                  <img src="{{asset("assets/img/gallery/iei5gy.jpg")}}" alt="" class="hidden-xs">
+                                  <img src="{{asset("assets/img/gallery/iei5g.jpg")}}" alt="" class="hidden-md hidden-lg hidden-sm">
+                                  <figcaption><a href="{{asset("assets/img/fancy-box/iei5f.jpg")}}" class="fancybox" data-fancybox-group="group"><span class="icon arrows-expand"></span></a></figcaption>
                               </figure>
                           </div>
                       </div>
@@ -308,24 +308,4 @@
   </section>
   <!--//================Gallery end==============//-->
   <div class="clear"></div>
-        <!--//================contact us starts==============//-->
-        <div class="padTB30 theme-bg contact-us">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9 col-sm-9 col-xs-12">
-                        <div class="contact-text">
-                            <p class="colorW text-left special-font mar0">Vacantes disponibles</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="footer-btn">
-                            <a href="contact.html" class="itg-button-simple pull-right small-left">Admisión</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <!--//================contact us end==============//-->
-
 @endsection
