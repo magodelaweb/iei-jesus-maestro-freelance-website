@@ -17,7 +17,7 @@
                               <span class="icon-bar"></span>
                               </button>
                               <!-- Logo -->
-                              <a class="navbar-brand" href="{{route("home")}}">
+                              <a class="navbar-brand" href="{{route("dashboard")}}">
                                 <img class="site_logo" alt="Site Logo"  src="{{asset('assets/img/logos/logo2.png')}}" />
                               </a>
                           </div>
@@ -25,13 +25,13 @@
                           <div class="navbar-collapse collapse">
                               <!-- nav -->
                               <ul class="nav navbar-nav">
-                                  <li class=""><a href="{{route("home")}}" class="nav-link {{$menu=="home"?"active":""}}">Inicio{!!$menu=="home"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
-                                  <li class=""><a href="{{route("infraestructura")}}" class="nav-link {{$menu=="infraestructura"?"active":""}}">Infraestructura{!!$menu=="infraestructura"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
+                                  <li class=""><a href="{{route("dashboard")}}" class="nav-link {{$menu=="home"?"active":""}}">Inicio{!!$menu=="home"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
+                                  <li class=""><a href="{{route("admin.infraestructura")}}" class="nav-link {{$menu=="infraestructura"?"active":""}}">Infraestructura{!!$menu=="infraestructura"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
                                   {{-- <li class=""><a href="{{route("horarios")}}" class="nav-link {{$menu=="horarios"?"active":""}}">Horarios{!!$menu=="horarios"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li> --}}
-                                  <li class=""><a href="{{route("propuesta")}}" class="nav-link {{$menu=="propuesta"?"active":""}}">Propuesta Pedagógica{!!$menu=="propuesta"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
-                                  <li class=""><a href="{{route("admision")}}" class="nav-link {{$menu=="admision"?"active":""}}">Admisión{!!$menu=="admision"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
-                                  <li class=""><a href="{{route("noticias")}}" class="nav-link {{$menu=="noticias"?"active":""}}">Noticias{!!$menu=="noticias"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
-                                  <li class=""><a href="{{route("contacto")}}" class="nav-link {{$menu=="contacto"?"active":""}}">Contacto{!!$menu=="contacto"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
+                                  <li class=""><a href="{{route("admin.propuesta")}}" class="nav-link {{$menu=="propuesta"?"active":""}}">Propuesta Pedagógica{!!$menu=="propuesta"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
+                                  <li class=""><a href="{{route("admin.admision")}}" class="nav-link {{$menu=="admision"?"active":""}}">Admisión{!!$menu=="admision"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
+                                  <li class=""><a href="{{route("admin.noticias")}}" class="nav-link {{$menu=="noticias"?"active":""}}">Noticias{!!$menu=="noticias"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
+                                  <li class=""><a href="{{route("admin.contacto")}}" class="nav-link {{$menu=="contacto"?"active":""}}">Contacto{!!$menu=="contacto"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
                               </ul>
                           </div>
                           <!-- navbar-collapse -->

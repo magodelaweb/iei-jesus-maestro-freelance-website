@@ -4,9 +4,8 @@
   <body>
     @include('snippets.pre')
     @include('snippets.top')
-    @include('snippets.nav')
+    @include('snippets.navadmin')
     @yield('body')
-    @include('snippets.footer')
     @include('snippets.script')
   </body>
 </html>

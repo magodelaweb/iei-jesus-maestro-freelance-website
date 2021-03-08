@@ -31,4 +31,9 @@ Route::get('/reglamento-interno',[HomeController::class, 'reglamento_interno'])-
 
 Route::middleware(['auth'])->group(function (){
   Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+  Route::get('/admin/infraestructura',[HomeController::class, 'infraestructura'])->name("admin.infraestructura");
+  Route::get('/admin/propuesta-pedagogica',[HomeController::class, 'propuesta'])->name("admin.propuesta");
+  Route::get('/admin/admision',[HomeController::class, 'admision'])->name("admin.admision");
+  Route::get('/admin/noticias',[HomeController::class, 'noticias'])->name("admin.noticias");
+  Route::get('/admin/contacto',[HomeController::class, 'contacto'])->name("admin.contacto");
 });

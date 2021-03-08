@@ -16,14 +16,14 @@ class LoginController extends Controller
         ]]);
     }
     public function login(){
-      return view('auth.login');
+      return view('auth.login',["base"=>true]);
     }
     public function authenticate(Request $request)
     {
         $remember=isset($request->remember);
         $credentials = [
           'email' => $request->email,
-          'password' => $request->password_060120211043
+          'password' => $request->password
         ];
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();
@@ -31,7 +31,7 @@ class LoginController extends Controller
         }
         return back()->withErrors([
             'email' => 'Error de autenticación.',
-        ])->withInput($request->except('password_060120211043'));
+        ])->withInput($request->except('password'));
     }
     public function logout(Request $request)
     {
