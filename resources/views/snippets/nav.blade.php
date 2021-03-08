@@ -47,8 +47,8 @@
                               <ul class="nav navbar-nav">
                                   <li class=""><a href="{{route("home")}}" class="nav-link {{$menu=="home"?"active":""}}">Inicio{!!$menu=="home"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
                                   <li class=""><a href="{{route("infraestructura")}}" class="nav-link {{$menu=="infraestructura"?"active":""}}">Infraestructura{!!$menu=="infraestructura"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
-                                  <li class=""><a href="{{route("horarios")}}" class="nav-link {{$menu=="horarios"?"active":""}}">Horarios{!!$menu=="horarios"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
-                                  <li class=""><a href="{{route("propuesta")}}" class="nav-link {{$menu=="propuesta"?"active":""}}">Propuesta{!!$menu=="propuesta"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
+                                  {{-- <li class=""><a href="{{route("horarios")}}" class="nav-link {{$menu=="horarios"?"active":""}}">Horarios{!!$menu=="horarios"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li> --}}
+                                  <li class=""><a href="{{route("propuesta")}}" class="nav-link {{$menu=="propuesta"?"active":""}}">Propuesta Pedagógica{!!$menu=="propuesta"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
                                   <li class=""><a href="{{route("admision")}}" class="nav-link {{$menu=="admision"?"active":""}}">Admisión{!!$menu=="admision"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
                                   <li class=""><a href="{{route("noticias")}}" class="nav-link {{$menu=="noticias"?"active":""}}">Noticias{!!$menu=="noticias"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>
                                   <li class=""><a href="{{route("contacto")}}" class="nav-link {{$menu=="contacto"?"active":""}}">Contacto{!!$menu=="contacto"?"<span class=\"sr-only\">(página actual)</span>":""!!}</a></li>

@@ -74,25 +74,27 @@
   <section class="padT50 padB20 theme-border-bottom">
       <div class="container">
           <div class="row">
-              <div class="col-md-3 col-sm-6 col-xs-12 padB30">
+              <div class="col-md-3 col-md-offset-3 col-sm-6 col-xs-12 padB30">
                   <div class="service-icon theme-icon color-pink">
                       <i class="fa fa-clock-o" aria-hidden="true"></i>
                   </div>
                   <div class="service-text">
-                      <h4>Atención</h4>
-                      <p>8:00 am - 2:00 pm</p>
+                      <h4>HORARIO 3 AÑOS</h4>
+                      <p><strong>Ingreso: </strong>8:00 am - 8:15 am</p>
+                      <p><strong>Salida: </strong>1:45 pm</p>
                   </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12 padB30">
                   <div class="service-icon theme-icon color-green">
-                      <i class="fa fa-coffee" aria-hidden="true"></i>
+                      <i class="fa fa-clock-o" aria-hidden="true"></i>
                   </div>
                   <div class="service-text">
-                      <h4>Desayuno</h4>
-                      <p>8.00 am</p>
+                      <h4>HORARIO 4 Y 5 AÑOS</h4>
+                      <p><strong>Ingreso: </strong>8:00 am - 8:15 am</p>
+                      <p><strong>Salida: </strong>2:00 pm</p>
                   </div>
               </div>
-              <div class="col-md-3 col-sm-6 col-xs-12 padB30">
+              {{-- <div class="col-md-3 col-sm-6 col-xs-12 padB30">
                   <div class="service-icon theme-icon color-purple">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                   </div>
@@ -109,7 +111,7 @@
                       <h4>Correo</h4>
                       <p>ieijesusmaestro@hotmail.com</p>
                   </div>
-              </div>
+              </div> --}}
           </div>
       </div>
   </section>
