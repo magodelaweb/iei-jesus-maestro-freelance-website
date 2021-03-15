@@ -6,3 +6,4 @@
 <script src="{{asset("assets/plugin/fancyBox/js/jquery.fancybox.pack.js")}}"></script>
 <script src="{{asset("assets/plugin/fancyBox/js/jquery.fancybox-media.js")}}"></script>
 <script src="{{asset("assets/js/main.js")}}"></script>
+@yield('scripts')  

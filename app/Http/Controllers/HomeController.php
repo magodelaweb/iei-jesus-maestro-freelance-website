@@ -1,6 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use App\Http\Requests\StoreQuestionRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactoWeb;
+use Config;
 
 class HomeController extends Controller
 {
@@ -38,6 +43,24 @@ class HomeController extends Controller
       return view('home.contacto',[
         "menu"=>"contacto"
       ]);
+    }
+    public function contacto_store(StoreQuestionRequest $request){
+      $name = $request->nombre;
+      $email = $request->correo;
+      $phone = $request->telefono;
+      $question = $request->consulta;
+      $mailContacto=(object)[
+        "name" => $name,
+        "email" => $email,
+        "phone" => $phone,
+        "question" => $question
+      ];
+      Mail::to(Config::get('mail.to_iei'))
+      ->send(new ContactoWeb($mailContacto));
+      ///Configurar redirect to with msj
+
+      dd($request);die;
+      // return redirect->route('/');
     }
     public function reglamento_interno(){
       $pathToFile=public_path('files').'/reglamento_interno.pdf';
