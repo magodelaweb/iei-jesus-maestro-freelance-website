@@ -35,6 +35,11 @@
   <section class="padT80 padB30">
       <!--- Theme heading start-->
       <div class="theme-heading marB30 positionR">
+          @if (session('status'))
+               <div class="msgSuccess alert alert-primary p-3">
+                 <span>{{ session('status') }}</span>
+               </div>
+          @endif
           <div class="container">
               <div class="row">
                   <div class="col-md-4 col-sm-6 col-xs-10  col-md-offset-4 col-sm-offset-3 col-xs-offset-1 heading-box text-center">
@@ -176,6 +181,7 @@
 @section('scripts')
   <script type="text/javascript">
   $(function() {
+    $(".msgSuccess").fadeOut(1500);
     @if ($errors->any())
       top=$("#frmContacto").offset().top;
       @error('g-recaptcha-response')

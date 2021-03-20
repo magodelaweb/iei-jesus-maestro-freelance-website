@@ -58,8 +58,9 @@ class HomeController extends Controller
       Mail::to(Config::get('mail.to_iei'))
       ->send(new ContactoWeb($mailContacto));
       ///Configurar redirect to with msj
-
-      dd($request);die;
+      return redirect()->route('contacto')
+        ->with('status', '¡Su mensaje fue enviado correctamente, pronto estaremos respondiéndole!');
+      //dd($request);die;
       // return redirect->route('/');
     }
     public function reglamento_interno(){
