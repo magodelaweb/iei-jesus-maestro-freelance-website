@@ -39,6 +39,11 @@ class HomeController extends Controller
         "menu"=>"noticias"
       ]);
     }
+    public function noticias_detalle($slug){
+      return view('home.noticias_detalle',[
+        "menu"=>"noticias"
+      ]);
+    }
     public function contacto(){
       return view('home.contacto',[
         "menu"=>"contacto"

@@ -26,6 +26,7 @@ Route::get('/horarios',[HomeController::class, 'horarios'])->name("horarios");
 Route::get('/propuesta-pedagogica',[HomeController::class, 'propuesta'])->name("propuesta");
 Route::get('/admision',[HomeController::class, 'admision'])->name("admision");
 Route::get('/noticias',[HomeController::class, 'noticias'])->name("noticias");
+Route::get('/noticias/{slug}',[HomeController::class, 'noticias_detalle'])->name("noticias_detalle");
 Route::get('/contacto',[HomeController::class, 'contacto'])->name("contacto");
 Route::post('/contacto-store',[HomeController::class, 'contacto_store'])->name("contacto_store");
 Route::get('/reglamento-interno',[HomeController::class, 'reglamento_interno'])->name("reglamento_interno");
