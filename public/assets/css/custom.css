@@ -16,3 +16,17 @@ ul.justify li{
 .invalid-feedback {
   color:#f93154
 }
+.cbRadio{
+  height: 40px;
+  display: inline-flex;
+}
+.cbRadio i.fa{
+  font-size: 24px;
+  line-height: 40px;
+  color:#f57f25;
+}
+.cbRadio span{
+  font-size: 13px;
+  line-height: 40px;
+  padding-left: 0.3em;
+}

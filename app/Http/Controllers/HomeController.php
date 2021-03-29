@@ -31,7 +31,8 @@ class HomeController extends Controller
     }
     public function admision(){
       return view('home.admision',[
-        "menu"=>"admision"
+        "menu"=>"admision",
+        "noCTA"=>true
       ]);
     }
     public function noticias(){

@@ -1,22 +1,24 @@
-<!--//================contact us starts==============//-->
-<div class="padTB30 theme-bg contact-us">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9 col-sm-9 col-xs-12">
-                <div class="contact-text">
-                    <p class="colorW text-left special-font mar0">Vacantes disponibles</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <div class="footer-btn">
-                    <a href="contact.html" class="itg-button-simple pull-right small-left">Admisión</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="clear"></div>
-<!--//================contact us end==============//-->
+@if(!isset($noCTA))
+  <!--//================contact us starts==============//-->
+  <div class="padTB30 theme-bg contact-us">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-9 col-sm-9 col-xs-12">
+                  <div class="contact-text">
+                      <p class="colorW text-left special-font mar0">Vacantes disponibles</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-12">
+                  <div class="footer-btn">
+                      <a href="contact.html" class="itg-button-simple pull-right small-left">Admisión</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="clear"></div>
+  <!--//================contact us end==============//-->
+@endif
 <!--//================Footer start==============//-->
 <footer class="main_footer">
     <div class="container">
