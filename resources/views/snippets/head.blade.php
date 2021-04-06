@@ -11,8 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
   <!-- Favicon -->
-  <link rel="shortcut icon" href="{{asset("assets/img/favicon.ico")}}" type="image/x-icon">
-  <link rel="icon" href="{{asset("assets/img/favicon.ico")}}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{asset("assets/img/favicon_v_2.ico")}}" type="image/x-icon">
+  <link rel="icon" href="{{asset("assets/img/favicon_v_2.ico")}}" type="image/x-icon">
   <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Master Css -->
   <link href="{{asset('css/main.css')}}" rel="stylesheet">

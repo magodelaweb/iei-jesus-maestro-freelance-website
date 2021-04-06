@@ -18,7 +18,7 @@
                               </button>
                               <!-- Logo -->
                               <a class="navbar-brand" href="{{route("dashboard")}}">
-                                <img class="site_logo" alt="Site Logo"  src="{{asset('assets/img/logos/logo2.png')}}" />
+                                <img class="site_logo" alt="Site Logo"  src="{{asset('assets/img/logos/nlogo-xs.jpg')}}" />
                               </a>
                           </div>
                           <!-- Navbar Collapse -->
