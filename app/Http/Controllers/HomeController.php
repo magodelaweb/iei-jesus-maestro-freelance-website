@@ -35,6 +35,10 @@ class HomeController extends Controller
         "noCTA"=>true
       ]);
     }
+    public function admision_store(Request $request){
+      $num_doc_1_=explode(":|°|:",$request->num_doc_1_);
+      dd($num_doc_1_,$request->all());die;
+    }
     public function noticias(){
       return view('home.noticias',[
         "menu"=>"noticias"
