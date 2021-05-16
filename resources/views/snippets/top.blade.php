@@ -5,7 +5,7 @@
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <ul>
                   <li><a href="#" onclick="event.preventDefault();"><i class="fa fa-envelope" aria-hidden="true"></i>ieijesusmaestro@hotmail.com</a></li>
-                  <li><a href="#" onclick="event.preventDefault();"><i class="fa fa-phone" aria-hidden="true"></i>01 2585427</a></li>
+                  <li><a href="https://api.whatsapp.com/send?phone=51952568995&text=Hola,%20tengo%20una%20consulta" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>952 568 995</a></li>
                 </ul>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12 text-right small-left">

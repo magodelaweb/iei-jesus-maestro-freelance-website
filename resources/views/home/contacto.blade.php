@@ -62,7 +62,7 @@
                       </p>
                       <p class="text-left marB30"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="pull-right">Jr. Carhuarazo Mz. G Lt. 3 Las Delicias, Chorrillos</span></p>
                       <p class="text-left marb20"><i class="fa fa-envelope" aria-hidden="true"></i><span class="pull-right">ieijesusmaestro@hotmail.com</span></p>
-                      <p class="text-left marB20"><i class="fa fa-phone" aria-hidden="true"></i><span class="pull-right">T: (01) 2585427</span></p>
+                      <p class="text-left marB20"><i class="fa fa-phone" aria-hidden="true"></i><span class="pull-right">952 568 995</span></p>
                       {{-- <p class="text-left marB20"><i class="fa fa-phone" aria-hidden="true"></i><span class="pull-right">Skype : itgeeks</span></p> --}}
                       {{-- <p class="text-left marB20"><i class="fa fa-phone" aria-hidden="true"></i><span class="pull-right">Www.itgeeksin.Com</span></p> --}}
                       <p class="text-left mar0">

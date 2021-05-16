@@ -4,43 +4,43 @@
 @endsection
 @section('body')
   <div class="clear"></div>
-        <!--//================Register starts==============//-->
-        <section class="padT80 padB50">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <h4 class="marB30 title">MATRICULA {{now()->year}}</h4>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <input type="text" placeholder="Apellidos y nombres del alumno">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 marB30">
-                            <input type="text" placeholder="DNI del alumno">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 marB30">
-                          <label class="radio-inline cbRadio"><input type="radio" name="sexo" value="M"><i class="fa fa-circle-o" aria-hidden="true"></i> <span>Masculino</span></label>
-                          <label class="radio-inline cbRadio"><input type="radio" name="sexo" value="F" checked><i class="fa fa-circle" aria-hidden="true"></i> <span>Femenino</span></label>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <input type="text" placeholder="Domicilio">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 marB30">
-                            <input type="text" placeholder="Fecha de nacimiento">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 marB30">
-                            <input type="text" placeholder="Lugar de nacimiento">
-                        </div>
+  <!--//================Register starts==============//-->
+  <section class="padT80 padB50">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                      <h4 class="marB30 title">MATRICULA {{now()->year}}</h4>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 marB30">
+                      <input type="text" placeholder="Apellidos y nombres del alumno">
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 marB30">
+                      <input type="text" placeholder="DNI del alumno">
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 marB30">
+                    <label class="radio-inline cbRadio"><input type="radio" name="sexo" value="M"><i class="fa fa-circle-o" aria-hidden="true"></i> <span>Masculino</span></label>
+                    <label class="radio-inline cbRadio"><input type="radio" name="sexo" value="F" checked><i class="fa fa-circle" aria-hidden="true"></i> <span>Femenino</span></label>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 marB30">
+                      <input type="text" placeholder="Domicilio">
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 marB30">
+                      <input type="text" placeholder="Fecha de nacimiento">
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 marB30">
+                      <input type="text" placeholder="Lugar de nacimiento">
+                  </div>
 
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <button type="submit" class="itg-button">Enviar Matrícula</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--//================Register end==============//-->
-        <div class="clear"></div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 marB30">
+                      <button type="submit" class="itg-button">Enviar Matrícula</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--//================Register end==============//-->
+  <div class="clear"></div>
   {{-- <div class="container container-fluid mt-5">
     <div class="row">
       <div class="card col-12">

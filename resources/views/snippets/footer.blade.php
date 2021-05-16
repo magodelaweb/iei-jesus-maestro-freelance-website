@@ -37,7 +37,7 @@
                             </li>
                             <li>
                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                <span>T: (01) 2585427</span>
+                                <span>952 568 995</span>
                             </li>
                             <li>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
