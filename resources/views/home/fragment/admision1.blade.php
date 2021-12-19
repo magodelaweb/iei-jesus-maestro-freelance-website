@@ -18,8 +18,8 @@
 </div>
 <div class="row">
   <div class="input-group mb-3 col-12 col-lg-6">
-    <span class="input-group-addon col-4" id="basic-addon3">Apellido Paterno</span>
-    <input type="text" name="ape_pat_0" class="form-control col-8" placeholder="Apellido Paterno" aria-describedby="basic-addon3" />
+    <span class="input-group-addon col-4" id="basic-addon3">Apellido Paterno <span class="text-danger">*</span></span>
+    <input type="text" name="ape_pat_0" class="form-control col-8" placeholder="Apellido Paterno" aria-describedby="basic-addon3" required />
   </div>
   <div class="input-group mb-3 col-12 col-lg-6 ps-lg-3">
     <span class="input-group-addon col-4" id="basic-addon4">Apellido Materno</span>
@@ -28,8 +28,8 @@
 </div>
 <div class="row">
   <div class="input-group mb-3 col-12">
-    <span class="input-group-addon col-4 col-lg-2 float-lg-none" id="basic-addon5">Nombres</span>
-    <input type="text" name="nom_0" class="form-control col-8 col-lg-10 ps-lg-3" placeholder="Nombres" aria-describedby="basic-addon5" />
+    <span class="input-group-addon col-4 col-lg-2 float-lg-none" id="basic-addon5">Nombres <span class="text-danger">*</span></span>
+    <input type="text" name="nom_0" class="form-control col-8 col-lg-10 ps-lg-3" placeholder="Nombres" aria-describedby="basic-addon5" required />
   </div>
 </div>
 <div class="row">

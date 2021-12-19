@@ -10,7 +10,7 @@
               </div>
               <div class="col-md-3 col-sm-3 col-xs-12">
                   <div class="footer-btn">
-                      <a href="contact.html" class="itg-button-simple pull-right small-left">Admisión</a>
+                      <a href="{{route("admision")}}" class="itg-button-simple pull-right small-left">Admisión</a>
                   </div>
               </div>
           </div>

@@ -36,7 +36,7 @@
       <!--- Theme heading start-->
       <div class="theme-heading marB30 positionR">
           @if (session('status'))
-               <div class="msgSuccess alert alert-primary p-3">
+               <div class="msgSuccess alert alert-success p-3">
                  <span>{{ session('status') }}</span>
                </div>
           @endif

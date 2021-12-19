@@ -25,7 +25,8 @@ Route::get('/infraestructura',[HomeController::class, 'infraestructura'])->name(
 Route::get('/horarios',[HomeController::class, 'horarios'])->name("horarios");
 Route::get('/propuesta-pedagogica',[HomeController::class, 'propuesta'])->name("propuesta");
 Route::get('/admision',[HomeController::class, 'admision'])->name("admision");
-Route::post('/admision',[HomeController::class,'admision_store'])->name("admision_store");
+Route::get('/solicitud',[HomeController::class, 'solicitud'])->name("solicitud");
+Route::post('/solicitud',[HomeController::class,'solicitud_store'])->name("solicitud_store");
 Route::get('/noticias',[HomeController::class, 'noticias'])->name("noticias");
 Route::get('/noticias/{slug}',[HomeController::class, 'noticias_detalle'])->name("noticias_detalle");
 Route::get('/contacto',[HomeController::class, 'contacto'])->name("contacto");

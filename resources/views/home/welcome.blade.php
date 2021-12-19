@@ -72,7 +72,13 @@
   <div class="clear"></div>
   <!--//================services starts==============//-->
   <section class="padT50 padB20 theme-border-bottom">
-      <div class="container">
+      @if (session('status'))
+           <div class="alert alert-success alert-dismissible p-3" role="alert">
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <span>{{ session('status') }}</span>
+           </div>
+      @endif
+      <div class="container" id="ctnBody">
           <div class="row">
               <div class="col-md-3 col-md-offset-3 col-sm-6 col-xs-12 padB30">
                   <div class="service-icon theme-icon color-pink">
@@ -310,4 +316,21 @@
   </section>
   <!--//================Gallery end==============//-->
   <div class="clear"></div>
+@endsection
+@section('scripts')
+  <script type="text/javascript">
+  $(function() {
+    @if (session('status'))
+      var top=$("#ctnBody").offset().top;
+      $('html, body').animate({
+        scrollTop: top
+      }, 700);
+    @endif
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+    $("button.close").on("click", function(){
+      $(this).parent(".alert").hide();
+    });
+  });
+  </script>
 @endsection
