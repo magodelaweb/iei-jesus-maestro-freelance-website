@@ -1,0 +1,104 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.sidebar {
+    background-color: #efefef;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.content-wrapper {
+    background-color: #fff;
+    padding: 10px;
+}
+#sidebar.active {
+  margin-left: -250px;
+}
+a[data-toggle="collapse"] {
+  position: relative;
+}
+a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+  content: '\e260';
+}
+#sidebar.active {
+  margin-left: -150px;
+}
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #f57f25;
+}
+a[data-toggle="collapse"] {
+  position: relative;
+}
+a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+  content: '\e260';
+}
+.sidebar, .sidebar-content, .sidebar.collapse.in {
+  width: 160px;
+}
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -150px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+
+}
+#sidebarCollapse{
+  border-radius: 14px;
+  color: #777;
+  background-color: #cdefab;
+  border: 0;
+  margin-left: -14px;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  padding: 0;
+  line-height: 28px;
+}
+#sidebarCollapse span.abrir{
+  display: none;
+}
+#sidebarCollapse span.cerrar{
+  display: block;
+}
+#sidebarCollapse.active span.abrir{
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#sidebarCollapse.active span.cerrar{
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}

@@ -16,6 +16,7 @@
   <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Master Css -->
   <link href="{{asset('css/main.css')}}" rel="stylesheet">
+  <link href="{{asset('css/admin.css')}}" rel="stylesheet">
   <title>@yield('title')</title>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

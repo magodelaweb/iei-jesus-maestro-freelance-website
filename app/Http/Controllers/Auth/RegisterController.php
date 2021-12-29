@@ -15,7 +15,7 @@ class RegisterController extends Controller
     $this->middleware('guest');
   }
   public function register(){
-    return view('auth.register');
+    return view('auth.register',["base"=>true]);
   }
   public function registrate(Request $request){
     try {

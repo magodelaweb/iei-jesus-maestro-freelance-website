@@ -4,14 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\Auth\LoginController;
-// use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetController;
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SolicitudesController;
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
-// Route::get('/register', [RegisterController::class, 'register'])->name('register');
-// Route::post('/registrate', [RegisterController::class, 'registrate'])->name('registrate');
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
+Route::post('/registrate', [RegisterController::class, 'registrate'])->name('registrate');
 Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('authenticate');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/logout', [LoginController::class, 'logout'])->name('cerrar_sesion');
@@ -35,6 +36,7 @@ Route::get('/reglamento-interno',[HomeController::class, 'reglamento_interno'])-
 
 Route::middleware(['auth'])->group(function (){
   Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+  Route::get('/solicitudes', [SolicitudesController::class, 'index'])->name('solicitudes');
   Route::get('/admin/infraestructura',[HomeController::class, 'infraestructura'])->name("admin.infraestructura");
   Route::get('/admin/propuesta-pedagogica',[HomeController::class, 'propuesta'])->name("admin.propuesta");
   Route::get('/admin/admision',[HomeController::class, 'admision'])->name("admin.admision");
