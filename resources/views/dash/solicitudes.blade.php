@@ -13,19 +13,31 @@
             <table class="table table-hover table-condensed">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                  <th>Id</th>
+                  <th>Fecha</th>
+                  <th>Documento</th>
+                  <th>Apellido P.</th>
+                  <th>Apellido M.</th>
+                  <th>Nombres</th>
+                  <th>Parentesco</th>
+                  <th>Dependientes</th>
+                  <th>Estado</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
                 @foreach ($solicitudes as $key => $registro)
                   <tr>
-                    <td>{{$key}}</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@@mdo</td>
+                    <td>{{$registro->id}}</td>
+                    <td>{{IEI::fecha_tabla($registro->fecha)}}</td>
+                    <td>{{$registro->apoderado->tipo_documento}} {{$registro->apoderado->documento}}</td>
+                    <td>{{$registro->apoderado->apellido_paterno}}</td>
+                    <td>{{$registro->apoderado->apellido_materno}}</td>
+                    <td>{{$registro->apoderado->nombres}}</td>
+                    <td>{{$registro->apoderado->parentesco}}</td>
+                    <td>{{$registro->apoderado->dependientes->count()}}</td>
+                    <td>{{$registro->estado}}</td>
+                    <td><a href="{{route("solicitudes_detalle",["id"=>$registro->id])}}"><i class="fa fa-list-alt"></i></a> </td>
                   </tr>
                 @endforeach
               </tbody>

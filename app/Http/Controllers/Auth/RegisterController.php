@@ -22,7 +22,7 @@ class RegisterController extends Controller
       $user=User::create([
         'name' => $request->name,
         'email' => $request->email,
-        'password' => Hash::make($request->password_060120211035),
+        'password' => Hash::make($request->password),
       ]);
     } catch (\Exception $e) {
       $errorInfo=$e->errorInfo;
@@ -33,11 +33,11 @@ class RegisterController extends Controller
       if ($code=="23000" && $subCode==1062) {
         return back()->withErrors([
             'email' => 'Este correo ha sido registrado anteriormente.',
-        ])->withInput($request->except('password_060120211035'));
+        ])->withInput($request->except('password'));
       }
       return back()->withErrors([
           'email' => $mensaje,
-      ])->withInput($request->except('password_060120211035'));
+      ])->withInput($request->except('password'));
     }
     finally{
       if (isset($user)) {
@@ -48,6 +48,6 @@ class RegisterController extends Controller
     }
     return back()->withErrors([
         'email' => 'Error de registro.',
-    ])->withInput($request->except('password_060120211035'));
+    ])->withInput($request->except('password'));
   }
 }
