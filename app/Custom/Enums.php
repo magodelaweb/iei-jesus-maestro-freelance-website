@@ -22,6 +22,20 @@ class Enums{
     };
   }
 
+  public function sexo_largo($char){
+    switch ($char) {
+      case 'F':
+        return "Femenino";
+        break;
+      case 'M':
+        return "Masculino";
+        break;
+      default:
+        return "Otro";
+        break;
+    };
+  }
+
   public function tipo_documento($int){
     switch ($int) {
       case 1:
