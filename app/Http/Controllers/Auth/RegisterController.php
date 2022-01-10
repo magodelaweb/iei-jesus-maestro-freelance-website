@@ -5,17 +5,18 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Models\User;
 
-class RegisterController extends Controller
+class RegisterController extends BaseController
 {
   public function __construct()
   {
+    parent::__construct();
     $this->middleware('guest');
   }
   public function register(){
-    return view('auth.register',["base"=>true]);
+    return view('auth.register',["base"=>true,"web"=>$this->web]);
   }
   public function registrate(Request $request){
     try {

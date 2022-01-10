@@ -1,5 +1,7 @@
 <?php
 namespace App\Helpers;
+
+use Illuminate\Support\Collection;
 use Carbon\Carbon;
 use App\Custom\Enums;
 
@@ -17,5 +19,17 @@ class ieijm{
     $sexo=Enums::make()->sexo_largo($char);
     return $sexo;
   }
-
+  public static function ctc($collection,$clave){
+    if($collection instanceof Collection) {
+      $item=$collection->where('clave',$clave)->first();
+      if (isset($item)) {
+        return $item->valor;
+      }
+    }    
+    return "";
+  }
+  public static function sti($cadena){
+    $prepare=explode(' ',$cadena);
+    return implode($prepare);
+  }
 }

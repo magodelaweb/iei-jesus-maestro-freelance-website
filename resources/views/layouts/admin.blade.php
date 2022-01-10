@@ -5,6 +5,7 @@
     @include('snippets.pre')
     @includeWhen(isset($includeNavAdmin)&&$includeNavAdmin, 'snippets.top_admin')
     @includeWhen(!(isset($includeNavAdmin)&&$includeNavAdmin), 'snippets.top')
+    {{-- @includeWhen(!(isset($includeNavAdmin)&&$includeNavAdmin), 'snippets.top_edit') --}}
     @includeWhen(!(isset($includeNavAdmin)&&$includeNavAdmin), 'snippets.navadmin')
     <div class="page-container">
       <div class="page-wrapper">

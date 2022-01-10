@@ -5,19 +5,20 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Models\User;
 
 use Illuminate\Support\Facades\Password;
 
-class ResetController extends Controller
+class ResetController extends BaseController
 { //4h
   public function __construct()
   {
+    parent::__construct();
     $this->middleware('guest');
   }
   public function request(){
-    return view('auth.forgot-password');
+    return view('auth.forgot-password',["web"=>$this->web]);
   }
   public function email(Request $request){
     $request->validate(['email' => 'required|email']);
@@ -29,7 +30,7 @@ class ResetController extends Controller
                 : back()->withErrors(['email' => __($status)])->withInput();
   }
   public function reset($token){
-    return view('auth.reset-password', ['token' => $token]);
+    return view('auth.reset-password', ['token' => $token,"web"=>$this->web]);
   }
   public function update(Request $request){
     $request->validate([

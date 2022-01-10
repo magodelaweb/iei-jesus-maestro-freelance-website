@@ -14,31 +14,36 @@ use App\Custom\Helpers;
 use Carbon\Carbon;
 use Config;
 
-class HomeController extends Controller
+class HomeController extends BaseController
 {
     public function home(){
       return view('home.welcome',[
-        "menu"=>"home"
+        "menu"=>"home",
+        "web"=>$this->web
       ]);
     }
     public function infraestructura(){
       return view('home.infraestructura',[
-        "menu"=>"infraestructura"
+        "menu"=>"infraestructura",
+        "web"=>$this->web
       ]);
     }
     public function horarios(){
       return view('home.horarios',[
-        "menu"=>"horarios"
+        "menu"=>"horarios",
+        "web"=>$this->web
       ]);
     }
     public function propuesta(){
       return view('home.propuesta',[
-        "menu"=>"propuesta"
+        "menu"=>"propuesta",
+        "web"=>$this->web
       ]);
     }
     public function admision(){
       return view('home.admision',[
-        "menu"=>"admision"
+        "menu"=>"admision",
+        "web"=>$this->web
       ]);
     }
     public function solicitud(){
@@ -49,7 +54,8 @@ class HomeController extends Controller
       // dd("test");
       return view('home.solicitud',[
         "menu"=>"admision",
-        "noCTA"=>true
+        "noCTA"=>true,
+        "web"=>$this->web
       ]);
     }
     public function solicitud_store(Request $request){
@@ -127,17 +133,20 @@ class HomeController extends Controller
     }
     public function noticias(){
       return view('home.noticias',[
-        "menu"=>"noticias"
+        "menu"=>"noticias",
+        "web"=>$this->web
       ]);
     }
     public function noticias_detalle($slug){
       return view('home.noticias_detalle',[
-        "menu"=>"noticias"
+        "menu"=>"noticias",
+        "web"=>$this->web
       ]);
     }
     public function contacto(){
       return view('home.contacto',[
-        "menu"=>"contacto"
+        "menu"=>"contacto",
+        "web"=>$this->web
       ]);
     }
     public function contacto_store(StoreQuestionRequest $request){
