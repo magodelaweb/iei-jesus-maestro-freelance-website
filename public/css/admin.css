@@ -110,4 +110,26 @@ a[aria-expanded="true"]::before {
   border-radius: 5px;
   padding: 0 5px;
   cursor: text;
+  background-color: rgba(255,255,255,0.15);
+}
+.nav-editable{
+  width: 3em;
+  line-height: 1.42857143;
+  top: 75%;
+  z-index: 99999999;
+}
+.editable-aceptar{
+  left: 5.5em;
+}
+.editable-cancelar{
+  left: 8.7em;
+}
+.d-none{
+  display: none !important;
+}
+.position-relative{
+  position: relative !important;
+}
+.position-absolute{
+  position: absolute !important;
 }

@@ -4,8 +4,32 @@
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <ul>
-                  <li><a class="editable" href="#" onclick="event.preventDefault();"><i class="fa fa-envelope" aria-hidden="true"></i>{{IEI::ctc($web,'email')}}</a></li>
-                  <li><a class="editable" href="https://api.whatsapp.com/send?phone=51{{IEI::sti(IEI::ctc($web,'whatsapp'))}}&text=Hola,%20tengo%20una%20consulta" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>{{IEI::ctc($web,'whatsapp')}}</a></li>
+                  <li class="position-relative">
+                    <a id="aEmail" class="editable" href="#" onclick="event.preventDefault();cambiarInput(this,'#txtEmail');"><i class="fa fa-envelope" aria-hidden="true"></i>{{IEI::ctc($web,'email')}}</a>
+                    <input type="text" class="form-control d-none" id="txtEmail" name="email"  aria-describedby="Modificar Correo Electrónico"
+                      value="{{IEI::ctc($web,'email')}}" placeholder="Ingrese Correo Electrónico" style="min-width: 18em;">
+                    </input>
+                    <a class="btn btn-primary position-absolute nav-editable editable-aceptar d-none" role="button">
+                      <i class="fa fa-check" aria-hidden="true" style="cursor:pointer;"></i>
+                    </a>
+                    <a  href="#" class="btn btn-danger position-absolute nav-editable editable-cancelar d-none" role="button"
+                    onclick="event.preventDefault();cancelNav(this,'#txtEmail','#aEmail','{{IEI::ctc($web,'email')}}');">
+                      <i class="fa fa-times" aria-hidden="true" style="cursor:pointer;"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a id="aWhatsApp" class="editable" href="#" onclick="event.preventDefault();cambiarInput(this,'#txtWhatsApp');"><i class="fa fa-whatsapp" aria-hidden="true"></i>{{IEI::ctc($web,'whatsapp')}}</a>
+                    <input type="text" class="form-control d-none" id="txtWhatsApp" name="whatsapp"  aria-describedby="Modificar WhatsApp"
+                      value="{{IEI::ctc($web,'whatsapp')}}" placeholder="Ingrese WhatsApp" style="min-width: 18em;">
+                    </input>
+                    <a class="btn btn-primary position-absolute nav-editable editable-aceptar d-none" role="button">
+                      <i class="fa fa-check" aria-hidden="true" style="cursor:pointer;"></i>
+                    </a>
+                    <a  href="#" class="btn btn-danger position-absolute nav-editable editable-cancelar d-none" role="button"
+                    onclick="event.preventDefault();cancelNav(this,'#txtWhatsApp','#aWhatsApp','{{IEI::ctc($web,'whatsapp')}}');">
+                      <i class="fa fa-times" aria-hidden="true" style="cursor:pointer;"></i>
+                    </a>
+                  </li>
                   {{-- <li>
                     <input type="email" class="form-control" id="txtEmail" name="email"  aria-describedby="Modificar Correo Electrónico"
                     value="{{IEI::ctc($web,'email')}}" placeholder="Ingrese Correo Electrónico"> --}}
