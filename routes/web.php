@@ -36,6 +36,7 @@ Route::get('/reglamento-interno',[HomeController::class, 'reglamento_interno'])-
 
 Route::middleware(['auth'])->group(function (){
   Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+  Route::post('envia-param-web',[DashboardController::class, 'enviaParamWeb'])->name("enviaParamWeb");
   Route::get('/solicitudes', [SolicitudesController::class, 'index'])->name('solicitudes');
   Route::get('/solicitud/{id}', [SolicitudesController::class, 'detalle'])->name('solicitudes_detalle');
   Route::get('/admin/infraestructura',[HomeController::class, 'infraestructura'])->name("admin.infraestructura");

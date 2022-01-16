@@ -113,16 +113,18 @@ a[aria-expanded="true"]::before {
   background-color: rgba(255,255,255,0.15);
 }
 .nav-editable{
-  width: 3em;
+  width: 2em;
   line-height: 1.42857143;
-  top: 75%;
+  top: 85%;
   z-index: 99999999;
+  opacity: 0.75;
+  padding: 3px 6px;
 }
 .editable-aceptar{
-  left: 5.5em;
+  left: 6em;
 }
 .editable-cancelar{
-  left: 8.7em;
+  left: 8.2em;
 }
 .d-none{
   display: none !important;
@@ -132,4 +134,34 @@ a[aria-expanded="true"]::before {
 }
 .position-absolute{
   position: absolute !important;
+}
+.ok{
+   -webkit-animation-name: realizadoOk;
+   -webkit-animation-duration: 0.7s;
+   animation-name: realizadoOk;
+   animation-duration: 0.7s;
+
+}
+
+@-webkit-keyframes realizadoOk {
+  from {
+    background-color: rgba(255,255,255,0.15);
+  }
+  3% {
+    background-color: rgba(0,255,0,0.35);
+  }
+  to {
+    background-color: rgba(255,255,255,0.15);
+  }
+}
+@keyframes realizadoOk {
+  from {
+    background-color: rgba(255,255,255,0.15);
+  }
+  3% {
+    background-color: rgba(0,255,0,0.35);
+  }
+  to {
+    background-color: rgba(255,255,255,0.15);
+  }
 }

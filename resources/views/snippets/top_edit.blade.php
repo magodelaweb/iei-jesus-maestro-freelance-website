@@ -5,28 +5,34 @@
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <ul>
                   <li class="position-relative">
-                    <a id="aEmail" class="editable" href="#" onclick="event.preventDefault();cambiarInput(this,'#txtEmail');"><i class="fa fa-envelope" aria-hidden="true"></i>{{IEI::ctc($web,'email')}}</a>
-                    <input type="text" class="form-control d-none" id="txtEmail" name="email"  aria-describedby="Modificar Correo Electrónico"
+                    <a id="aEmail" class="editable" href="#" onclick="event.preventDefault();cambiarInput(this,'#txtEmail');"><i class="fa fa-envelope" aria-hidden="true"></i><span class="span-value">{{IEI::ctc($web,'email')}}</span></a>
+                    <input type="text" class="form-control d-none input-editable" id="txtEmail" name="email"  aria-describedby="Modificar Correo Electrónico"
                       value="{{IEI::ctc($web,'email')}}" placeholder="Ingrese Correo Electrónico" style="min-width: 18em;">
                     </input>
-                    <a class="btn btn-primary position-absolute nav-editable editable-aceptar d-none" role="button">
+                    <a class="btn btn-primary position-absolute nav-editable editable-aceptar d-none" role="button"
+                    data-a="#aEmail" data-txt="#txtEmail" data-campo='email'
+                    onclick="event.preventDefault();saveNav(this);">
                       <i class="fa fa-check" aria-hidden="true" style="cursor:pointer;"></i>
                     </a>
                     <a  href="#" class="btn btn-danger position-absolute nav-editable editable-cancelar d-none" role="button"
-                    onclick="event.preventDefault();cancelNav(this,'#txtEmail','#aEmail','{{IEI::ctc($web,'email')}}');">
+                    data-reset="{{IEI::ctc($web,'email')}}" data-a="#aEmail" data-txt="#txtEmail"
+                    onclick="event.preventDefault();cancelNav(this);">
                       <i class="fa fa-times" aria-hidden="true" style="cursor:pointer;"></i>
                     </a>
                   </li>
                   <li class="position-relative">
-                    <a id="aWhatsApp" class="editable" href="#" onclick="event.preventDefault();cambiarInput(this,'#txtWhatsApp');"><i class="fa fa-whatsapp" aria-hidden="true"></i>{{IEI::ctc($web,'whatsapp')}}</a>
-                    <input type="text" class="form-control d-none" id="txtWhatsApp" name="whatsapp"  aria-describedby="Modificar WhatsApp"
+                    <a id="aWhatsApp" class="editable" href="#" onclick="event.preventDefault();cambiarInput(this,'#txtWhatsApp');"><i class="fa fa-whatsapp" aria-hidden="true"></i><span class="span-value">{{IEI::ctc($web,'whatsapp')}}</span></a>
+                    <input type="text" class="form-control d-none input-editable" id="txtWhatsApp" name="whatsapp"  aria-describedby="Modificar WhatsApp"
                       value="{{IEI::ctc($web,'whatsapp')}}" placeholder="Ingrese WhatsApp" style="min-width: 18em;">
                     </input>
-                    <a class="btn btn-primary position-absolute nav-editable editable-aceptar d-none" role="button">
+                    <a class="btn btn-primary position-absolute nav-editable editable-aceptar d-none" role="button"
+                    data-a="#aWhatsApp" data-txt="#txtWhatsApp" data-campo='whatsapp'
+                    onclick="event.preventDefault();saveNav(this);">
                       <i class="fa fa-check" aria-hidden="true" style="cursor:pointer;"></i>
                     </a>
                     <a  href="#" class="btn btn-danger position-absolute nav-editable editable-cancelar d-none" role="button"
-                    onclick="event.preventDefault();cancelNav(this,'#txtWhatsApp','#aWhatsApp','{{IEI::ctc($web,'whatsapp')}}');">
+                    data-reset="{{IEI::ctc($web,'whatsapp')}}" data-a="#aWhatsApp" data-txt="#txtWhatsApp"
+                    onclick="event.preventDefault();cancelNav(this);">
                       <i class="fa fa-times" aria-hidden="true" style="cursor:pointer;"></i>
                     </a>
                   </li>
