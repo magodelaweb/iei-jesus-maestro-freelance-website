@@ -6,7 +6,8 @@
     @includeWhen(isset($includeNavAdmin)&&$includeNavAdmin, 'snippets.top_admin')
     {{-- @includeWhen(!(isset($includeNavAdmin)&&$includeNavAdmin), 'snippets.top') --}}
     @includeWhen(!(isset($includeNavAdmin)&&$includeNavAdmin), 'snippets.top_edit')
-    @includeWhen(!(isset($includeNavAdmin)&&$includeNavAdmin), 'snippets.navadmin')
+    {{-- @includeWhen(!(isset($includeNavAdmin)&&$includeNavAdmin), 'snippets.navadmin') --}}
+    @includeWhen(!(isset($includeNavAdmin)&&$includeNavAdmin), 'snippets.navadmin_edit')
     <div class="page-container">
       <div class="page-wrapper">
         <div id="sidebar" class="sidebar collapse in width">
@@ -20,11 +21,100 @@
         </div>
       </div>
     </div>
+    <div id="modalSubirImagen" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Seleccionar Imagen</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="cerrarSubirImagen();">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-3">Galería de imagenes previas. (Ordenadas: El que está en uso, luego, del mas reciente al mas antiguo por fecha de creación.)</p>
+            <div class="card-group" style="overflow-x: scroll; flex-flow: row nowrap;">
+              <div class="card" style="min-width: 18rem;">
+                <img class="card-img-top p-3 text-center" src="{{asset('storage/layout')}}/{{IEI::ctc($web,'logo')}}" alt="Card image cap" style="width:15rem; margin: 0 auto;">
+                <div class="card-body">
+                  <h5 class="card-title text-center">image001.jpg</h5>
+                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> --}}
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Subido el 12/01/2022</small>
+                </div>
+              </div>
+              <div class="card" style="min-width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  {{-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> --}}
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+              <div class="card" style="min-width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> --}}
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+
+              <div class="card" style="min-width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> --}}
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+              <div class="card" style="min-width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  {{-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> --}}
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+              <div class="card" style="min-width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> --}}
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3">Subir nuevo archivo</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cerrarSubirImagen();">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar Cambios</button>
+          </div>
+        </div>
+      </div>
+    </div>
     @include('snippets.script')
     <script type="text/javascript">
     $(document).ready(function() {
 
     });
+    function mostrarSubirImagen(){
+      $("#modalSubirImagen").modal('show');
+    }
+    function cerrarSubirImagen(){
+      $("#modalSubirImagen").modal('hide');
+    }
     function toogleSidebar(elem){
       $("#sidebar").toggleClass("active");
       $(elem).toggleClass("active");
