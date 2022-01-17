@@ -32,68 +32,19 @@
           </div>
           <div class="modal-body">
             <p class="mb-3">Galería de imagenes previas. (Ordenadas: El que está en uso, luego, del mas reciente al mas antiguo por fecha de creación.)</p>
-            <div class="card-group" style="overflow-x: scroll; flex-flow: row nowrap;">
-              <div class="card" style="min-width: 18rem;">
-                <img class="card-img-top p-3 text-center" src="{{asset('storage/layout')}}/{{IEI::ctc($web,'logo')}}" alt="Card image cap" style="width:15rem; margin: 0 auto;">
-                <div class="card-body">
-                  <h5 class="card-title text-center">image001.jpg</h5>
-                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> --}}
+            <div class="card-group py-3" style="overflow-x: scroll; flex-flow: row nowrap;">
+              @foreach ($listaLayoutFinal as $key => $imgLayout)
+                <div class="card" style="min-width: 12rem; flex: revert;">
+                  <img class="card-img-top p-3 text-center" src="{{asset('storage/layout')}}/{{$imgLayout->nombre}}" alt="Imagen de {{$imgLayout->nombre}}" style="width:12rem; margin: 0 auto;">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">{{$imgLayout->nombre}}</h5>
+                    <p class="card-text text-center">{{$imgLayout->size}}</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Subido el {{$imgLayout->last_update}}</small>
+                  </div>
                 </div>
-                <div class="card-footer">
-                  <small class="text-muted">Subido el 12/01/2022</small>
-                </div>
-              </div>
-              <div class="card" style="min-width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  {{-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> --}}
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-              </div>
-              <div class="card" style="min-width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> --}}
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-              </div>
-
-              <div class="card" style="min-width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> --}}
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-              </div>
-              <div class="card" style="min-width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  {{-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> --}}
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-              </div>
-              <div class="card" style="min-width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> --}}
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-              </div>
+              @endforeach
             </div>
             <p class="mt-3">Subir nuevo archivo</p>
           </div>
