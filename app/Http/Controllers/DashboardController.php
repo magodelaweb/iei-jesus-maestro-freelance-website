@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Web;
 use App\Repositories\ImageRepositoryInterface;
+use IEI;
 
 class DashboardController extends BaseController
 {
@@ -15,7 +16,8 @@ class DashboardController extends BaseController
       $this->image=$image;
     }
     public function index(){
-      $listaLayoutFinal = $this->image->arr_obtener_imagen('layout','logos');
+      $imgSeleccionada=IEI::ctc($this->web,'logo');
+      $listaLayoutFinal = $this->image->arr_obtener_imagen('layout','logos',$imgSeleccionada);
       return view('dash.dashboard',[
         "menu"=>"dashboard",
         "web"=>$this->web,

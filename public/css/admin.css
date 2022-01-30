@@ -171,6 +171,66 @@ a[aria-expanded="true"]::before {
   }
 }
 
+.ctnSelect{
+  animation-name: sombraSelect;
+  animation-duration: 0.1s;
+  box-shadow: inset 0px 0px 4px 1px rgba(245, 127, 37,0.75);
+  border: inset 2px #f57f25;
+  border-top-width: 8px;
+  border-top-color: rgba(245,127,37,0.75);
+}
+
+@keyframes sombraSelect {
+  from {
+    box-shadow: none;
+    border: none;
+    border-top-width: none;
+    border-top-color: none;
+  }
+  to{
+    box-shadow: inset 0px 0px 4px 1px rgba(245, 127, 37,0.75);
+    border: inset 2px #f57f25;
+    border-top-width: 8px;
+    border-top-color: rgba(245,127,37,0.75);
+  }
+}
+
+.ctnOk{
+   animation-name: sombraOk;
+   animation-duration: 1.5s;
+
+}
+
+@keyframes sombraOk {
+  from {
+    box-shadow: none;
+  }
+  30% {
+    box-shadow: 0px 0px 4px 4px rgba(0,255,0,0.75);
+  }
+  to {
+    box-shadow: none;
+  }
+}
+
+.ctnError{
+   animation-name: bordeError;
+   animation-duration: 1.5s;
+
+}
+
+@keyframes bordeError {
+  from {
+    box-shadow: none;
+  }
+  30% {
+    box-shadow: 0px 0px 4px 4px rgba(255,0,0,0.75);
+  }
+  to {
+    box-shadow: none;
+  }
+}
+
 .modal-backdrop{
   position:fixed;
   top:0;
@@ -185,4 +245,23 @@ a[aria-expanded="true"]::before {
 }
 .modal-backdrop.show{
   opacity:.5
+}
+.file-attachment-btn__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  cursor: inherit;
+  opacity: 0;
+}
+.file-attachment-btn {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.site_logo{
+  width: 67px;
+  height: 67px;
 }

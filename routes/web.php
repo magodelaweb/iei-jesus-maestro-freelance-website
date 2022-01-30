@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\ResetController;
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SolicitudesController;
+use App\Http\Controllers\ImageController;
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/register', [RegisterController::class, 'register'])->name('register');
@@ -44,4 +45,6 @@ Route::middleware(['auth'])->group(function (){
   Route::get('/admin/admision',[HomeController::class, 'admision'])->name("admin.admision");
   Route::get('/admin/noticias',[HomeController::class, 'noticias'])->name("admin.noticias");
   Route::get('/admin/contacto',[HomeController::class, 'contacto'])->name("admin.contacto");
+
+  Route::post('subir-imagen-logo',[ImageController::class, 'subirImagenLogo'])->name("subirImagenLogo");
 });

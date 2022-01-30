@@ -18,7 +18,7 @@
                               </button>
                               <!-- Logo -->
                               <a class="navbar-brand" href="#" onclick="event.preventDefault();mostrarSubirImagen()" data-toggle="modal" data-target="#modalSubirImagen" role=button>
-                                <img class="site_logo editable-img-white p-1" alt="Site Logo"  src="{{asset('storage/layout')}}/{{IEI::ctc($web,'logo')}}" />
+                                <img id="imgLogo" class="site_logo editable-img-white p-1" alt="Site Logo"  src="{{asset('storage/layout')}}/{{IEI::ctc($web,'logo')}}" />
                               </a>
                           </div>
                           <!-- Navbar Collapse -->

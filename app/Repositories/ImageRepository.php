@@ -22,7 +22,31 @@ class ImageRepository implements ImageRepositoryInterface{
 		return new static();
 	}
 
-	public function arr_obtener_imagen($disk,$category){
+  public function upload_image($disk,$category,$file){
+    $hoy=Carbon::now();
+    try {
+      $path = Storage::disk($disk)->putFile('',$file);
+      $size_=Storage::disk('layout')->size($path);
+      if (isset($path)&&$path!=="") {
+        $imgLayoutDb = new Image();
+        $imgLayoutDb->categoria=$category;
+        $imgLayoutDb->nombre=$path;
+        $imgLayoutDb->estado="OK";
+        $imgLayoutDb->ultimo_uso=$hoy;
+        $imgLayoutDb->peso_bytes=$size_;
+        $imgLayoutDb->descripcion="";
+        $imgLayoutDb->save();
+        return $imgLayoutDb;
+      }
+      else{
+        return false;
+      }
+    } catch (\Exception $e) {
+      return false;
+    }
+  }
+
+	public function arr_obtener_imagen($disk,$category,$seleccionada){
     $fecha = new DateTime();
     $imgLayouts = Storage::disk($disk)->files();
     $imgLayoutDbs = Image::where('categoria',$category)->get();
@@ -38,6 +62,12 @@ class ImageRepository implements ImageRepositoryInterface{
       if ($file->estado=="OK") {
         $file_wm=new stdClass();
         $file_wm->nombre=$file->nombre;
+        if ($file->nombre==$seleccionada) {
+          $file_wm->seleccionada=true;
+        }
+        else{
+          $file_wm->seleccionada=false;
+        }
         $file_wm->size=IEI::sizeToHuman($file->peso_bytes);
         $file_wm->last_update=$file->ultimo_uso->format('d/m/Y');
         $listaLayoutFinal->push($file_wm);

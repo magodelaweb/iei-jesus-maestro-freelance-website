@@ -53,3 +53,9 @@
 
 /* fin flex */
 .col-auto{flex:0 0 auto;width:auto}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
