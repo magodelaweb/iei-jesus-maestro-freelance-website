@@ -18,7 +18,7 @@
                               </button>
                               <!-- Logo -->
                               <a class="navbar-brand" href="{{route("dashboard")}}">
-                                <img class="site_logo" alt="Site Logo"  src="{{asset('assets/img/logos/nlogo-xs.jpg')}}" />
+                                <img class="site_logo" alt="Site Logo"  src="{{asset('storage/layout')}}/{{IEI::ctc($web,'logo')}}" />
                               </a>
                           </div>
                           <!-- Navbar Collapse -->

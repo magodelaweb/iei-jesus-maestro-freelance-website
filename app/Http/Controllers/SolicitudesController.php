@@ -16,7 +16,7 @@ class SolicitudesController extends BaseController
     public function __construct(ImageRepositoryInterface $image){
       parent::__construct();
       $this->image=$image;
-      $this->listaLayoutFinal = $this->image->arr_obtener_imagen('layout','logos');
+      $this->listaLayoutFinal = $this->image->arr_obtener_imagen('layout','logos','');
     }
     public function index(){
       $solicitudes=Solicitud::with('apoderado.dependientes')->get();
