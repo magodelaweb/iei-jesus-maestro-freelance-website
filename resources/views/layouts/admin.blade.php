@@ -71,6 +71,12 @@
     $(document).ready(function() {
       token=$("[name=_token]").val();
     });
+    // $("#slider-section").on("mouseenter",".owl-item.active .slider-text .row div",function () {
+    //     $("#slider-section").find(".owl-nav").addClass("d-none");
+    // })
+    // $("#slider-section").on("mouseleave",".owl-item.active .slider-text .row div",function () {
+    //     $("#slider-section").find(".owl-nav").removeClass("d-none");
+    // })
     function seleccionar(ctr){
       $(ctr).siblings("a.card").removeClass("ctnSelect");
       $(ctr).addClass("ctnSelect");
@@ -81,11 +87,12 @@
       confirm.addClass("ctnSelect");
     });
     function guardarImagen(){
+      let contenedor=$("#ctnImgLogo");
       let select=$("a.card.ctnSelect");
       select.siblings("a.card").removeClass("confirm");
       select.addClass("confirm");
       let nameImg=select.find("h5.nameImg").html();
-      enviarParamWebImg('logo',nameImg,"#imgLogo");
+      enviarParamWebImg('logo',nameImg,"#imgLogo",contenedor,select);
       // debugger
       // console.log(nameImg);
     }
@@ -93,6 +100,7 @@
       $("#modalSubirImagen").modal('show');
     }
     function cerrarSubirImagen(){
+      $("#ctnImgLogo").scrollLeft(0);
       $("#modalSubirImagen").modal('hide');
     }
     function toogleSidebar(elem){
@@ -156,7 +164,7 @@
       enviaParamWeb(campo,valor,destino,origenInput,origen,hermanoCancelar);
       destino.find(".span-value").html(valor);
     }
-    function enviarParamWebImg(campo,valor,ctrImg){
+    function enviarParamWebImg(campo,valor,ctrImg,contenedor,select){
       $.ajax({
         method: "POST",
         url: "{{route("enviaParamWeb")}}",
@@ -167,6 +175,7 @@
           let nuevoSrc="{{asset('storage/layout')}}/"+valor;
           $(ctrImg).attr("src",nuevoSrc);
           cerrarSubirImagen();
+          contenedor.prepend(select);
           //cerrar
           //actualizar logo
           // animacionOk(aJq,inputJq,btnAceptar,btnCancelar);
@@ -244,13 +253,13 @@
         let contenedor=$("#ctnImgLogo");
         let cards=contenedor.find(".card");
         cards.removeClass("ctnSelect");
-        contenedor.append(component);
-        let longCard=cards.first().width();
-        let nCard=cards.length;
-        let ancho=nCard*longCard+100;
+        contenedor.prepend(component);
+        // let longCard=cards.first().width();
+        // let nCard=cards.length;
+        // let ancho=nCard*longCard+100;
         document.getElementById("frmSubirImagenLogo").reset();
         contenedor.animate({
-            scrollLeft: ancho
+            scrollLeft: 0
         }, 300);
         contenedor.addClass("ctnOk");
         setTimeout(function(){
@@ -313,6 +322,7 @@
         return `${day}/${month}/${year}`;
       }
     }
+
     </script>
   </body>
 </html>

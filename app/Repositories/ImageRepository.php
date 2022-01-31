@@ -70,9 +70,20 @@ class ImageRepository implements ImageRepositoryInterface{
         }
         $file_wm->size=IEI::sizeToHuman($file->peso_bytes);
         $file_wm->last_update=$file->ultimo_uso->format('d/m/Y');
-        $listaLayoutFinal->push($file_wm);
+        if ($file_wm->seleccionada) {
+          $listaLayoutFinal->prepend($file_wm);
+        }
+        else{
+          if ($key==0) {
+            $listaLayoutFinal->put(1,$file_wm);
+          }
+          else{
+            $listaLayoutFinal->push($file_wm);
+          }
+        }
       }
     }
+    // dd($listaLayoutFinal);
     foreach ($comparar->solo2 as $key => $value) {
       $size_=Storage::disk('layout')->size($value);
       $last_update_=Storage::disk('layout')->lastModified($value);

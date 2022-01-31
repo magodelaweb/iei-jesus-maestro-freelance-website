@@ -42,7 +42,7 @@ $(window).on("load", function() {
 
 
     // ============================================
-    // progressBar 
+    // progressBar
     // =============================================
 
 
@@ -59,7 +59,7 @@ $(window).on("load", function() {
 
     //========================================
     // Scroll top
-    //======================================== 	
+    //========================================
 
     if (scrollTop.length) {
         scrollTop.on('click', function() {
@@ -72,7 +72,7 @@ $(window).on("load", function() {
 
     //========================================
     // LightBox / Fancybox
-    //======================================== 	
+    //========================================
 
     if (fancybox.length) {
         fancybox.fancybox();
@@ -87,7 +87,7 @@ $(window).on("load", function() {
     }
     //========================================
     // Accordion functions Calling
-    //======================================== 	
+    //========================================
 
     if (faq.length) {
         faq.accordion();
@@ -96,7 +96,7 @@ $(window).on("load", function() {
 
     //========================================
     // Owl Carousel functions Calling
-    //======================================== 	
+    //========================================
 
     owlCarouselInit();
 
@@ -108,7 +108,7 @@ $(window).on("load", function() {
 
 //========================================
 // Owl Carousel functions
-//======================================== 	
+//========================================
 
 function owlCarouselInit() {
 
@@ -116,15 +116,15 @@ function owlCarouselInit() {
 
     //========================================
     // owl carousels settings
-    //======================================== 		
+    //========================================
     var mainSlider = $('#main-slider');
     var aboutSlider = $('#about-us-slider');
     var facilitiesSlider = $('#facilities-slider');
     var blogSlider = $('#blog-slider');
     var blogSliderSm = $('#blog-slider-sm');
     var partenerSlider = $('#partener-slider');
-    var nextNav = 'Next';
-    var prevNav = 'Prev';
+    var nextNav = 'Siguiente';
+    var prevNav = 'Anterior';
 
     if (mainSlider.length) {
         mainSlider.owlCarousel({
