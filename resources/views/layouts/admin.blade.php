@@ -71,12 +71,6 @@
     $(document).ready(function() {
       token=$("[name=_token]").val();
     });
-    // $("#slider-section").on("mouseenter",".owl-item.active .slider-text .row div",function () {
-    //     $("#slider-section").find(".owl-nav").addClass("d-none");
-    // })
-    // $("#slider-section").on("mouseleave",".owl-item.active .slider-text .row div",function () {
-    //     $("#slider-section").find(".owl-nav").removeClass("d-none");
-    // })
     function seleccionar(ctr){
       $(ctr).siblings("a.card").removeClass("ctnSelect");
       $(ctr).addClass("ctnSelect");
@@ -158,7 +152,7 @@
       let hermanoCancelar = origen.siblings("a.nav-editable.editable-cancelar"); //btn Cancelar
 
       let origenInput=$(ctrInput);
-      let valor = origenInput.val();
+      let valor=origenInput.val();
       hermanoCancelar.attr("data-reset",valor);
       let destino = $(ctrA);
       enviaParamWeb(campo,valor,destino,origenInput,origen,hermanoCancelar);

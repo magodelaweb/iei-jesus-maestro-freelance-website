@@ -32,6 +32,15 @@ class DashboardController extends BaseController
         return true;
       }
       else{
+        $web=new Web();
+        $web->seccion="auto";
+        $web->clave=$request->campo;
+        $web->tipo="auto";
+        $web->valor=$request->valor;
+        $web->save();
+        if (isset($web->id)) {
+          return true;
+        }
         return false;
       }
     }

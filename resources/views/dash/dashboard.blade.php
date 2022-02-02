@@ -78,9 +78,25 @@
                                       <i class="fa fa-times" aria-hidden="true" style="cursor:pointer;"></i>
                                     </a>
                                   </h2>
-                                  <p>Educamos con gran amor al niño, procurando la formación integral, puntualidad al ingreso,
-                                    la dedicación de las docentes , el involucramiento de los padres y el horario de clases.
-                                  </p>
+                                  <div class="position-relative">
+                                    <p id="aSlider113" class="editable" style="font-size:revert;"
+                                    onclick="event.preventDefault();cambiarInput(this,'#txaSlider113');">
+                                      <span class="span-value" style="font-size:revert;">{{IEI::ctc($web,'slider113')}}</span>
+                                    </p>
+                                    <textarea class="form-control d-none input-editable" id="txaSlider113"  aria-describedby="Modificar Texto"
+                                     name="slider113" rows="2" placeholder="Ingrese Texto"
+                                     style="min-width: 18em;">{{IEI::ctc($web,'slider113')}}</textarea>
+                                    <a class="btn btn-primary position-absolute nav-editable editable-aceptar d-none" role="button"
+                                     data-a="#aSlider113" data-txt="#txaSlider113" data-campo='slider113'
+                                     onclick="event.preventDefault();saveNav(this);" style="left: 46%;">
+                                       <i class="fa fa-check" aria-hidden="true" style="cursor:pointer;"></i>
+                                    </a>
+                                    <a  href="#" class="btn btn-danger position-absolute nav-editable editable-cancelar d-none" role="button"
+                                     data-reset="{{IEI::ctc($web,'slider113')}}" data-a="#aSlider113" data-txt="#txaSlider113"
+                                     onclick="event.preventDefault();cancelNav(this);" style="left: 50%;">
+                                       <i class="fa fa-times" aria-hidden="true" style="cursor:pointer;"></i>
+                                    </a>
+                                  </div>
                                   <a href="{{route("admision")}}" class="itg-button">Admisión</a>
                                 </div>
                             </div>
